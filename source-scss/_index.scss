@@ -11,8 +11,11 @@ body {
     .topBar {
       @extend %topBar;
 
-      .title {
-        @extend %title;
+      h1 {
+        title {
+          @extend %title;
+          text-decoration: none;
+        }
       }
 
       .menu-toggel {
