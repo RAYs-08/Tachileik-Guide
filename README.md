@@ -1,0 +1,5 @@
+![Under Development](https://img.shields.io/badge/Status-Under%20Development-blue)
+
+A responsive web application designed to help travelers explore destinations, discover local attractions, and plan their next adventure.
+
+Website Live URL: [https://rays-08.github.io/Tour-Guide/](https://rays-08.github.io/Tour-Guide/html/index.html)
