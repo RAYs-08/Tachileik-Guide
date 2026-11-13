@@ -1,4 +1,4 @@
-![Under Development](https://img.shields.io/badge/Status-Under%20Development-blue)
+(Under Development!)
 
 A responsive web application designed to help travelers explore destinations, discover local attractions, and plan their next adventure.
 
