@@ -11,8 +11,8 @@ body {
     .topBar {
       @extend %topBar;
 
-      h1 {
-        title {
+      .title-h1 {
+        > a {
           @extend %title;
           text-decoration: none;
         }
