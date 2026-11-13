@@ -1,0 +1,15 @@
+@use 'sass:color';
+
+$primary-color: #1f1f1f;
+$h2-size: clamp(2rem, 3vw, 3rem);
+$primary-txt-color: #e2e2e2;
+$primary-surface: hsl(0, 0%, 9%);
+$secondary-surface: hsl(0, 0%, 15%);
+$bg-color: rgb(51, 51, 51);
+$card-shadow: 0 0 10px #020202ad;
+$border-color: #818181;
+$border-color2: #4c5170;
+$transparent-dark-layer: rgba(0, 0, 0, 0.75);
+$weather-info-main: clamp(1.1rem, 1.2cqw, 1.5rem);
+$weather-info-secondary: clamp(1rem, 1cqw, 1.3rem);
+$description-size: clamp(0.8rem, 1.5cqw, 1rem);

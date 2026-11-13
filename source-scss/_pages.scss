@@ -1,0 +1,147 @@
+@use 'configs';
+@use 'variables';
+@use 'utilities';
+@use 'sass:color';
+
+//START OF PLACES TO HANG OUT
+body {
+  header {
+    .right-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(0.5rem, 3vw, 2.5rem);
+
+      .weather-clock {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        .weather-icon,
+        .clock-icon {
+          width: 24px;
+        }
+
+        #temperature,
+        #local-time {
+          font-weight: 600;
+          font-size: clamp(0.8rem, 2vw, 0.9rem);
+        }
+
+        #weather,
+        .clock-text {
+          font-size: clamp(0.7rem, 2vw, 0.8rem);
+        }
+      }
+
+        .separator {
+          width: 1px;
+          height: 3rem;
+          background-color: variables.$border-color;
+        }
+    }
+  }
+
+  main {
+    .img-bg-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem 3.5rem;
+      background-image: url('../images/kloi.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 0.5rem;
+      box-shadow: variables.$card-shadow;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        background-color: variables.$transparent-dark-layer;
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .welcome2 {
+        font-size: calc(variables.$h2-size - 0.5rem);
+        margin-block-end: 0.8rem;
+        position: relative;
+        z-index: 1;
+        color: color.adjust(variables.$primary-txt-color, $lightness: -5%);
+      }
+
+      .follow-up2 {
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
+        position: relative;
+        z-index: 1;
+      }
+    } 
+
+    .bottom-border {
+      width: 100%;
+      height: 1px;
+      background-color: variables.$border-color;
+      margin-top: 2rem;
+    }
+
+    .cards-container2 {
+      gap: 1.5rem;
+      row-gap: 3rem;
+      margin-block: 5rem;
+
+      .card2 {
+        @extend %card2;
+        overflow: hidden;
+
+        .img-container2 {
+          cursor: pointer;
+          width: 50cqw;
+          min-width: 150px;
+          overflow: hidden;
+          position: relative;
+
+          &::after {
+            content: '';
+            @extend %transparent-dark-layer;
+            @include utilities.transparent-gradient-dark-layer(to left);
+          }
+
+          .img2 {
+            aspect-ratio: 5/6;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+
+            &:hover {
+              @extend %card2-img-hover;
+            }
+          }
+        } 
+
+        .card-info-container {
+          border-left: 1rem solid variables.$border-color2;
+          padding: 0.5rem 1rem;
+
+          .card-title2 {
+            margin-block-start: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid variables.$border-color;
+          }
+
+          .description2 {
+            font-size: variables.$weather-info-secondary;
+            margin-block-start: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+//END OF PLACES TO HANG OUT

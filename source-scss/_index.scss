@@ -1,0 +1,188 @@
+@use 'configs';
+@use 'variables';
+@use 'utilities';
+@use 'sass:color';
+
+body {
+  padding-top: 8rem;
+  background-color: variables.$bg-color;
+
+  header {
+    .topBar {
+      @extend %topBar;
+
+      .title {
+        @extend %title;
+      }
+
+      .menu-toggel {
+        @extend %menu-toggel;
+
+        .menu {
+          @extend %menu;
+        }
+      }
+    }
+  }
+
+  main {
+    padding-inline: 1.5rem;
+
+    .welcome {
+      font-size: variables.$h2-size;
+      margin-block-end: 0.2rem;
+      text-align: center;
+    }
+
+    .follow-up {
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .weather-info {
+      display: flex;
+      width: fit-content;
+      gap: clamp(5rem, 20vw, 30rem);
+      margin-top: 3rem;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      padding: 1.5rem 3rem;
+      border-bottom: 1px solid variables.$border-color;
+
+      .first-weather-row,
+      .second-weather-row {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+
+        .weather-icon,
+        .clock-icon {
+          width: clamp(24px, 2vw, 34px);
+        }
+
+        .weather-container,
+        .clock-text-container {
+          display: flex;
+          flex-direction: column;
+          gap: 0.1rem;
+          margin-right: clamp(2rem, 5cqw, 5rem);
+
+          .weather-text,
+          .clock-text1 {
+            font-weight: bold;
+            font-size: variables.$weather-info-secondary;
+          }
+
+          #weather,
+          .clock-text2 {
+            font-size: clamp(0.8rem, 1cqw, 1rem);
+          }
+        }
+
+        #temperature,
+        #local-time {
+          font-weight: bold;
+          font-size: variables.$weather-info-main;
+        }
+      }
+    }
+      
+    .cards-container1,
+    .cards-container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 1.5rem;
+      row-gap: 5rem;
+      margin-block: 8rem;
+
+      .card,
+      .card-down {
+        @extend %card1;
+
+        .img-container {
+          width: 100%;
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+
+          &::after {
+            content: '';
+            @extend %transparent-dark-layer;
+          }
+
+          .img {
+            width: 100%;
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+            border-top-right-radius: 0.3rem;
+            border-top-left-radius: 0.3rem;
+            transition: transform 0.4s ease;
+            display: block;
+
+            &:hover {
+              @extend %card1-img-hover;
+            }
+          }
+        }
+
+        .card-title {
+          font-size: clamp(1rem, 2vw, 1.5rem);
+          font-weight: 600;
+          text-align: center;
+          margin-block: 0.5rem;
+        }
+
+        .description {
+          @extend %card1-description;
+        }
+      }
+
+      .card-down {
+        margin-block-start: 2rem;
+      }
+    }
+
+  }
+
+  footer {
+    .footer-contents {
+      @extend %footer-contents;
+
+      .notice-container {
+        @extend %notice-container;
+
+        .notice {
+          @extend %notice;
+
+          .notice-icon {
+            @extend %notice-icon;
+          }
+
+          .notice-text {
+            @extend %notice-text;
+          }
+        }
+      }
+
+      .disclaimer-container {
+        @extend %disclaimer-container;
+
+        .disclaimer-title {
+          @extend %disclaimer-title;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1819px) {
+  .cards-container1 {
+    > :last-child {
+      margin-block-start: 2rem;
+    }
+  }
+}

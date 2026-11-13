@@ -1,0 +1,32 @@
+@use 'variables';
+@use 'sass:color';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  & * {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    color: variables.$primary-txt-color;
+  }
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
