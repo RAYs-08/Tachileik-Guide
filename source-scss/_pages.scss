@@ -126,19 +126,44 @@ body {
         } 
 
         .card-info-container {
+          display: flex;
+          flex-direction: column;
           border-left: 1rem solid variables.$border-color2;
           padding: 0.5rem 1rem;
 
           .card-title2 {
             margin-block-start: 0.5rem;
             padding-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: clamp(1rem, 2cqw, 1.5rem);
             border-bottom: 1px solid variables.$border-color;
           }
 
           .description2 {
+            flex-grow: 1;
             font-size: variables.$weather-info-secondary;
             margin-block-start: 0.5rem;
+            font-size: clamp(0.7rem, 1.5cqw, 1.15rem);
           }
+
+          .placeholder-notice-container {
+            display: block;
+            line-height: 1.5cqw;
+            padding-block-end: 1rem;
+
+            .placeholder-notice {
+              color: #aaa;
+              font-size: clamp(0.6rem, 1.2cqw, 1rem);
+            }
+          }
+        }
+      }
+    }
+
+    .cards-container2 > div:nth-child(4) {
+      .card-info-container {
+        .card-title2 {
+          font-size: clamp(0.8rem, 1.6cqw, 1.5rem);
         }
       }
     }
