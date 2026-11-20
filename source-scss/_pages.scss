@@ -51,7 +51,6 @@ body {
       align-items: center;
       text-align: center;
       padding: 2rem 3.5rem;
-      background-image: url('../images/kloi.png');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -82,6 +81,13 @@ body {
         z-index: 1;
       }
     } 
+
+    #places-to-hang-out {
+      background-image: url('../images/kloi.png');
+    }
+    #pagodas {
+      background-image: url('../images/79a24e03-c381-4949-a193-526b36114dab.png');
+    }
 
     .bottom-border {
       width: 100%;
@@ -137,6 +143,12 @@ body {
             font-weight: 600;
             font-size: clamp(1rem, 2cqw, 1.5rem);
             border-bottom: 1px solid variables.$border-color;
+
+            &:has(span) {
+              span {
+                display: block;
+              }
+            }
           }
 
           .description2 {
