@@ -57,9 +57,31 @@ const time = new Intl.DateTimeFormat("en-GB", {
 });
 
 function updateTime() {
-  document.getElementById("local-time").textContent =
-    time.format(new Date()).toUpperCase();
+  const element = document.getElementById("local-time");
+
+  if (!element) return;
+
+  element.textContent = time.format(new Date()).toUpperCase();
 }
 
-updateTime();
 setInterval(updateTime, 60000);
+updateTime();
+
+
+// Display local date
+function updateLocalDate() {
+  const element = document.getElementById("local-date");
+
+  if (!element) return;
+
+  element.textContent = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Yangon",
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  }).format(new Date());
+}
+
+setInterval(updateLocalDate, 60000);
+updateLocalDate();

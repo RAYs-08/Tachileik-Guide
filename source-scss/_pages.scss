@@ -35,11 +35,15 @@ body {
         }
       }
 
-        .separator {
-          width: 1px;
-          height: 3rem;
-          background-color: variables.$border-color;
-        }
+      .separator {
+        width: 1px;
+        height: 3rem;
+        background-color: variables.$border-color;
+      }
+
+      #local-date {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+      }
     }
   }
 

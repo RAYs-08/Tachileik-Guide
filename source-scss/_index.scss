@@ -89,6 +89,10 @@ body {
           font-weight: bold;
           font-size: variables.$weather-info-main;
         }
+
+        #local-date {
+          font-size: clamp(0.8rem, 1cqw, 1rem);
+        }
       }
     }
       

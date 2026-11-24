@@ -18,20 +18,7 @@
 
 <body>
 <!--START OF BODY-->
-  <header>
-  <!--START OF HEADER-->
-    <div class="topBar">
-      <h1 class="title-h1">
-        <a href="https://rays-08.github.io/Tour-Guide/html/index.html">Tachileik Guide</a>
-      </h1>
-
-      <label for="menu-check" class="menu-toggel">
-        <img class="menu" src="../images/hamburger-menu.svg" alt="Menu Icon">
-      </label>
-      <input type="checkbox" aria-hidden="true" hidden id="menu-check">
-    </div>
-  <!--END OF HEADER-->
-  </header>
+  <div id="header"></div>
 
   <main>
   <!--START OF MAIN-->
@@ -58,13 +45,16 @@
           <p class="clock-text2">Tachileik</p>
         </div>
 
-        <p id="local-time">--:--</p>
+        <div>
+          <p id="local-time">--:--</p>
+          <div id="local-date"></div>
+        </div>
       </div>
     </div>
 
     <div class="cards-container1">
       <div class="card">
-        <a class="img-container" href="https://rays-08.github.io/Tour-Guide/html/places-to-hang-out.html">
+        <a class="img-container" href="https://rays-08.github.io/Tour-Guide/places-to-hang-out.html">
           <img class="img" src="../images/img2.png" alt="Places to Hang Out" loading="eager" decoding="async" fetchpriority="high">
         </a>
         <div class="card-title">Places to Hang Out</div>
@@ -74,7 +64,7 @@
       </div>
 
       <div class="card-down">
-        <a class="img-container" href="https://rays-08.github.io/Tour-Guide/html/pagodas.html">
+        <a class="img-container" href="https://rays-08.github.io/Tour-Guide/pagodas.html">
           <img class="img" src="../images/temple.png" alt="Pagodas And Monasteries" loading="eager" decoding="async" fetchpriority="high">
         </a>
         <div class="card-title">Pagodas / Monasteries</div>
@@ -136,32 +126,10 @@
   <!--END OF MAIN-->
   </main>
 
-  <footer>
-  <!--START OF FOOTER-->
-    <div class="footer-contents">
-      <div class="notice-container">
-        <div class="notice">
-          <img class="notice-icon" src="../images/download.svg" alt="Notice Icon">
-          <div class="notice-text">IMPORTANT NOTICE</div>
-        </div>
+  <div id="footer"></div>
 
-        <p class="notice-description">
-          Please take a moment to read the following disclaimer before exploring this website.
-        </p>
-      </div>
-
-      <div class="disclaimer-container">
-        <p class="disclaimer-title">Disclaimer: </p>
-
-        <p class="disclaimer">
-          This is a sample website for educational purposes only. We are not affiliated with any of the businesses or services mentioned. This website is for demonstration and informational purposes only.
-        </p>
-      </div>
-    </div>
-  <!--END OF FOOTER-->
-  </footer>
-
-  <script src="./tachileik-guide.js"></script>
+  <script src="./javascript/tachileik-guide.js"></script>
+  <script src="./javascript/components.js"></script>
 <!--END OF BODY-->
 </body>
 
