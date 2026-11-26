@@ -92,6 +92,9 @@ body {
     #pagodas {
       background-image: url('../images/79a24e03-c381-4949-a193-526b36114dab.png');
     }
+    #local-markets {
+      background-image: url('../images/96c78f35-3f32-4bba-8ba2-dde772f7c79c.png');
+    }
 
     .bottom-border {
       width: 100%;
@@ -176,7 +179,7 @@ body {
       }
     }
 
-    .cards-container2 > div:nth-child(4) {
+    .cards-container2 > div:nth-child(4):has(p.card-title2) {
       .card-info-container {
         .card-title2 {
           font-size: clamp(0.8rem, 1.6cqw, 1.5rem);
